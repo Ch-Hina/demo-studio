@@ -1,6 +1,8 @@
 import localFont from "next/font/local";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/navbar";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -12,16 +14,20 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+  
+const montserrat = Montserrat({
+   subsets: ["latin"] 
+  })
 
 export const metadata = {
-  title: "Demo Studio -Website Desgin",
+  title: "Demo Studio - Website Desgin",
   description: "First next js project",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${montserrat.className} ${montserrat.className}`}>
         <NavBar />
         {children}
       </body>
