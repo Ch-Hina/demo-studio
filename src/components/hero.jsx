@@ -1,5 +1,5 @@
 import Image from "next/image";
-import  background from "@/assests/image/jpg/image-01.jpg"
+import  Background from "@/assests/image/jpg/image-01.jpg"
 import Style from "@/styles/components/hero.module.css"
 
 import { faArrowRightLong} from '@fortawesome/free-solid-svg-icons'
@@ -23,7 +23,7 @@ const Hero = () => {
                 
         
            
-           <Image  className ={Style.heroImage} src= {background} width={"5000"} height={"3000"} alt="hero image" />
+           <Image  className ={Style.heroImage} src= {Background} width={"5000"} height={"3000"} alt="hero image" />
         </>
     );
 }
